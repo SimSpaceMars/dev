@@ -1,0 +1,32 @@
+{
+  "name": "crops",
+  "version": "1.0.0",
+  "description": "Web app that gives growers information about several diseases and crop pests that are around the place with the help of a interactive map.",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://fero23@bitbucket.org/fero23/crops.git"
+  },
+  "keywords": [
+    "crops",
+    "interactive",
+    "map",
+    "diseases",
+    "crop",
+    "pests"
+  ],
+  "author": "Crops Hacking Group",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.12.2",
+    "connect": "^3.3.5",
+    "cookie-parser": "^1.3.4",
+    "express": "^4.12.3",
+    "express-handlebars": "^2.0.0",
+    "express-session": "^1.11.1",
+    "pg": "^4.3.0"
+  }
+}
