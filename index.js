@@ -15,6 +15,8 @@ app.engine("handlebars", handlebars.engine);
 
 app.set("view engine", "handlebars");
 
+app.use(express.static('public'));
+
 app.handlebars = handlebars;
 
 app.use(bodyParser.urlencoded({
