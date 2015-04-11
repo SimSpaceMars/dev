@@ -19,7 +19,7 @@
     "pests"
   ],
   "author": "Crops Hacking Group",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "body-parser": "^1.12.2",
     "connect": "^3.3.5",
