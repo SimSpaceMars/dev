@@ -2,6 +2,7 @@ function updateValues(position) {
     $("#x").val(position.lat());
     $("#y").val(position.lng());
 }
+
 function initialize() {
     var latLng = new google.maps.LatLng(12.13639, -86.25139);
 
@@ -50,14 +51,32 @@ function initialize() {
         drawCircle();
     });
 
+    $("#map input").change(function(evt) {
+        if(isNaN(evt.target.value)){
+            evt.preventDefault();
+            updateValues(marker.getPosition());
+        }
+        else{
+            map.panTo(new google.maps.LatLng($("#x").val(), $("#y").val()));
+            drawCircle();
+        }
+    });
+
+    $("#submt").click(function() {
+        if(isNaN($("#x").val()) || isNaN($("#y").val()) || isNaN($("#radius").val())){
+            alert("Los valores de las coordenadas y radio del mapa no son valores numéricos,\n"
+                +" por favor vuelva a ingresarlos e inténtelo de nuevo");
+            updateValues(marker.getPosition());
+        }
+        else{
+            document.getElementById("pointForm").submit();
+        }
+    });
+
     updateValues(marker.getPosition());
     drawCircle();
-
-    $("#map input").change(function() {
-         map.panTo(new google.maps.LatLng($("#x").val(), $("#y").val()));
-         drawCircle();
-    });
 }
+
 $(function () {
     initialize();
 });

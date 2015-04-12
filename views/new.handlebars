@@ -1,7 +1,7 @@
 <script type="text/javascript"
       src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCyQId5aEVBNEt2_-ZXdWwNI-cTX-jUTvc&sensor=FALSE">
 </script>
-<form role="form" class="col-xs-6" style="float:none; margin: 0 auto;">
+<form id="pointForm" action="/new" method="POST" role="form" class="col-md-6" style="float:none; margin: 0 auto;">
   <h1>Add new pest or disease</h1>
   <div class="form-group">
     <label class="control-label" for="name">Point Name:</label>
@@ -26,21 +26,21 @@
     Ubicación en el mapa:
   </div>
   <div class="row" id="map">
-    <label for="x" class="col-xs-2">Latitud:</label>
-    <div class="input col-xs-2">
+    <label for="x" class="col-md-2">Latitud:</label>
+    <div class="input col-md-2">
       <input type="text" class="form-control" value="0" id="x" name="x">
     </div>
-    <label for="y" class="col-xs-2">Longitud:</label>
-    <div class="input col-xs-2">
+    <label for="y" class="col-md-2">Longitud:</label>
+    <div class="input col-md-2">
       <input type="text" class="form-control" value="0" id="y" name="y">
     </div>
-    <label for="radius" class="col-xs-1">Rango:</label>
-    <div class="input col-xs-3">
+    <label for="radius" class="col-md-1">Rango:</label>
+    <div class="input col-md-3">
       <input type="text" class="form-control" value="500" id="radius" name="radius">
     </div>
   </div>
   <div id="map_canvas" style="height:200px; border-radius:5px;"></div>
-  <button type="button" class="btn btn-default" aria-label="Center Align">
+  <button type="button" id="submt" class="btn btn-default" aria-label="Center Align">
     <span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Agregar
   </button>
 </form>
