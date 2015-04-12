@@ -12,8 +12,20 @@ h1{
     background: #060628;
 }
 
+<<<<<<< HEAD
 #map label {
     line-height: 34px;
 }
 
 button{margin: 10px auto;}
+=======
+.input-group{
+    margin-left: 30px;
+    margin-bottom: 30px
+}
+select{margin-bottom:30px;
+margin-left:30px;}
+
+button{margin-left: 30px}
+label {margin-left:30px}
+>>>>>>> 95afcfefac38f56fcc1c60100172ad4d60703afe
