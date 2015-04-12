@@ -1,33 +1,47 @@
-<h1>Add new pest or disease</h1>
-	<div class="row">
-    <form role="form" class="col-xs-5">
-<div class="input-group">
-  <span class="input-group-addon" id="name">Disease/Pest's Name</span>
-  <input type="text" class="form-control" placeholder="Name" aria-describedby="basic-addon1">
-</div>
-<select class="form-control">
-	<option value="pest">Pest</option>
-	<option value="disease">Disease</option>
-</select>
-<div class="input-group">
-  <span class="input-group-addon" id="description">Description</span>
-  <input type="text" class="form-control" placeholder="Descripción" aria-describedby="basic-addon1">
-</div>
-<div class="input-group">
-  <span class="input-group-addon" id="url">URL</span>
-  <input type="text" class="form-control" placeholder="http://example.com" aria-describedby="basic-addon1">
-</div>
-<label>
-	<br>
-	<br>
-	Ubicación en el mapa
-</label>
-<div class="input-group">
-  <span class="input-group-addon" id="range">Infection's Range</span>
-  <input type="text" class="form-control" placeholder="Range" aria-describedby="basic-addon1">
-</div>
-<button type="button" class="btn btn-default" aria-label="Left Align">
-  <span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Agregar
-</button>
+<script type="text/javascript"
+      src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCyQId5aEVBNEt2_-ZXdWwNI-cTX-jUTvc&sensor=FALSE">
+</script>
+<form role="form" class="col-xs-6" style="float:none; margin: 0 auto;">
+  <h1>Add new pest or disease</h1>
+  <div class="form-group">
+    <label class="control-label" for="name">Point Name:</label>
+    <input type="text" class="form-control" placeholder="Name" id="name" name="name">
+  </div>
+  <div class="form-group">
+    <label class="control-label" for="type">Point Type:</label>
+    <select class="form-control" name="type" id="type">
+     <option value="pest">Pest</option>
+     <option value="disease">Disease</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label class="control-label" for="description">Description:</label>
+    <input type="text" class="form-control" placeholder="Descripción" id="description" name="description">
+  </div>
+  <div class="form-group">
+    <label class="control-label" for="url">URL:</label>
+    <input type="text" class="form-control" placeholder="http://example.com" id="url" name="url">
+  </div>
+  <div style="font-weight: bold; margin-bottom: 5px;">
+    Ubicación en el mapa:
+  </div>
+  <div class="row" id="map">
+    <label for="x" class="col-xs-2">Latitud:</label>
+    <div class="input col-xs-2">
+      <input type="text" class="form-control" value="0" id="x" name="x">
+    </div>
+    <label for="y" class="col-xs-2">Longitud:</label>
+    <div class="input col-xs-2">
+      <input type="text" class="form-control" value="0" id="y" name="y">
+    </div>
+    <label for="radius" class="col-xs-1">Rango:</label>
+    <div class="input col-xs-3">
+      <input type="text" class="form-control" value="500" id="radius" name="radius">
+    </div>
+  </div>
+  <div id="map_canvas" style="height:200px; border-radius:5px;"></div>
+  <button type="button" class="btn btn-default" aria-label="Center Align">
+    <span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Agregar
+  </button>
 </form>
-</div>
+<script src="/js/new.js"></script>

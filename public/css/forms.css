@@ -12,19 +12,8 @@ h1{
     background: #060628;
 }
 
-.input-group{
-    margin-left: 30px;
-    margin-top: 30px
+#map label {
+    line-height: 34px;
 }
 
-select{
-    margin-left:30px;
-    margin-top: 30px
-}
-
-div{
-    margin-left: 30px;
-    margin-top: 30px
-}
-
-button{margin-left: 30px}
+button{margin: 10px auto;}
