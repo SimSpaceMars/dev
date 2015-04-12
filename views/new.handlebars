@@ -1,1 +1,35 @@
-<h1>Aquí el formulario</h1>
+<h1>Add new pest or disease</h1>
+<body>
+	{{body}}
+<div class="input-group">
+  <span class="input-group-addon" id="name">Disease/Pest's Name</span>
+  <input type="text" class="form-control" placeholder="Name" aria-describedby="basic-addon1">
+</div>
+<div class="dropdown">
+  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+    Type
+    <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Pest</a></li>
+    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Disease</a></li>
+</div>
+<div class="input-group">
+  <span class="input-group-addon" id="description">Description</span>
+  <input type="text" class="form-control" placeholder="Descripción" aria-describedby="basic-addon1">
+</div>
+<div class="input-group">
+  <span class="input-group-addon" id="url">URL</span>
+  <input type="text" class="form-control" placeholder="http://example.com" aria-describedby="basic-addon1">
+</div>
+<label>
+	Ubicación en el mapa
+</label>
+<div class="input-group">
+  <span class="input-group-addon" id="range">Infection's Range</span>
+  <input type="text" class="form-control" placeholder="Range" aria-describedby="basic-addon1">
+</div>
+<button type="button" class="btn btn-default" aria-label="Left Align">
+  <span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Agregar
+</button>
+</body>
