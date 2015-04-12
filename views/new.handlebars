@@ -11,7 +11,7 @@ border-radius: 25px;
     background: #060628;}
  .input-group{margin-left: 30px;
  	margin-top: 30px}
- 	.dropdown{margin-top: 30px}
+ 	select{margin-left:30px;margin-top: 30px}
 div{margin-left: 30px;
  margin-top: 30px}
  button{margin-left: 30px}
@@ -25,15 +25,10 @@ div{margin-left: 30px;
   <span class="input-group-addon" id="name">Disease/Pest's Name</span>
   <input type="text" class="form-control" placeholder="Name" aria-describedby="basic-addon1">
 </div>
-<div class="dropdown">
-  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
-    Type
-    <span class="caret"></span>
-  </button>
-  <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Pest</a></li>
-    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Disease</a></li>
-</div>
+<select>
+	<option value="pest">Pest</option>
+	<option value="disease">Disease</option>
+</select>
 <div class="input-group">
   <span class="input-group-addon" id="description">Description</span>
   <input type="text" class="form-control" placeholder="Descripción" aria-describedby="basic-addon1">
