@@ -11,7 +11,8 @@ module.exports = function (app) {
         res.type("text/html");
         res.render("new", {
             title: "Agregar nuevo punto",
-            description: "Agregar nuevo punto de plaga o enfermedad"
+            description: "Agregar nuevo punto de plaga o enfermedad",
+            style: ["/css/forms.css"]
         });
     });
 

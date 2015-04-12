@@ -1,31 +1,11 @@
-<style>
-body {
-    background-color: #867791;
-}
-h1{color:green;
-text-align: center;
-font-style:italic;
-font-variant:small-caps;
-font-weight:bold;
-border-radius: 25px;
-    background: #060628;}
- .input-group{margin-left: 30px;
- 	margin-top: 30px}
- 	select{margin-left:30px;margin-top: 30px}
-div{margin-left: 30px;
- margin-top: 30px}
- button{margin-left: 30px}
-</style>
 <h1>Add new pest or disease</h1>
-<body>
-	{{body}}
 	<div class="row">
     <form role="form" class="col-xs-5">
 <div class="input-group">
   <span class="input-group-addon" id="name">Disease/Pest's Name</span>
   <input type="text" class="form-control" placeholder="Name" aria-describedby="basic-addon1">
 </div>
-<select>
+<select class="form-control">
 	<option value="pest">Pest</option>
 	<option value="disease">Disease</option>
 </select>
@@ -51,4 +31,3 @@ div{margin-left: 30px;
 </button>
 </form>
 </div>
-</body>
