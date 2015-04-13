@@ -1,6 +1,6 @@
 function updateValues(position) {
-    $("#x").val(position.lat());
-    $("#y").val(position.lng());
+    $("#x").val(position.lng());
+    $("#y").val(position.lat());
 }
 
 function initialize() {
@@ -57,7 +57,9 @@ function initialize() {
             updateValues(marker.getPosition());
         }
         else{
-            map.panTo(new google.maps.LatLng($("#x").val(), $("#y").val()));
+            var pos = new google.maps.LatLng($("#y").val(), $("#x").val());
+            marker.setPosition(pos);
+            map.panTo(pos);
             drawCircle();
         }
     });

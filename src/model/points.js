@@ -28,7 +28,7 @@ module.exports.query = function(cb) {
             function getPointsInRange(table) {
                 return function(cb, range) {
                     client.query("SELECT id, name, description, url, start_date, ST_X(point) as x, ST_Y(point) as y, radius FROM " +
-                        table + " WHERE ST_DWithin(ST_GeomFromText('POINT(" + range.x + " " + range.y + ")', 4326), ST_Buffer(point, radius), $1)", 
+                        table + " WHERE ST_DWithin(ST_GeomFromText('POINT(" + range.x + " " + range.y + ")::geography', 4326), point::geography, $1)", 
                         [range.radius], function(err, result) {
                             if(err){
                                 console.log("Eror al obtener la lista de puntos: " + err);

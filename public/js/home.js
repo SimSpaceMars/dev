@@ -23,15 +23,14 @@ function initialize() {
 
     function getAndDrawPoints(page, color) {
         var bound = map.getBounds().getSouthWest(); 
-        var x = map.getCenter().lat(), y = map.getCenter().lng();
+        var y = map.getCenter().lat(), x = map.getCenter().lng();
         var center = new google.maps.LatLng(x, y);
-        var sw = new google.maps.LatLng(bound.k, bound.D);
+        var sw = new google.maps.LatLng(bound.D, bound.k);
         var radius = google.maps.geometry.spherical.computeDistanceBetween(center, sw);   
         $.post(page, {x: x, y: y, radius: radius}, function (points) {
             if(points){
-                console.log("Número: " + points.length, "Radio: " + radius);
                 points.forEach(function (point) {
-                    var position = new google.maps.LatLng(point.x, point.y);
+                    var position = new google.maps.LatLng(point.y, point.x);
 
                     var circleOptions = {
                       strokeColor: color,
