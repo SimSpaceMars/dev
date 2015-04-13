@@ -1,0 +1,17 @@
+h3{color: purple; margin-left: 70px; margin-right: 70px;}
+p.serif{color: white; 
+    font-family: "Verdana", verdana, serif; 
+    margin-top: 0px; margin-left: 70px;
+    margin-right: 70px; border-radious: 25px; 
+    background: #780B8E; 
+    padding: 20px; 
+    width: 600px; 
+    height: 160px;
+}
+span{
+    margin-left: 70px;
+    margin-right: 70px;
+}
+body{
+    background-color: #18D3EB
+}

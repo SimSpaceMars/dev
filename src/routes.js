@@ -5,7 +5,9 @@ module.exports = function (app) {
         res.type("text/html");
         res.render("home", {
             title: "Crops - Sistema de control de plagas",
-            description: "Crops landing page"
+            description: "Crops landing page",
+            style: ["/css/home.css"]
+
         });
     });
 
@@ -27,6 +29,23 @@ module.exports = function (app) {
         });
         res.redirect("/");
     });
+
+    app.post("/getDiseases", function (req, res) {
+        db.query(function (points) {
+            points.getDiseasesInRange(function (results) {
+                res.json(results);
+            }, {x: req.body.x, y: req.body.y, radius: req.body.radius});
+        });
+    });
+
+    app.post("/getPests", function (req, res) {
+        db.query(function (points) {
+            points.getPestsInRange(function (results) {
+                res.json(results);
+            }, {x: req.body.x, y: req.body.y, radius: req.body.radius});
+        });
+    });
+
 
     app.use(function (req, res) {
         res.type("text/plain");

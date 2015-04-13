@@ -13,7 +13,7 @@ CREATE TABLE MapPoint(
     description VARCHAR(100) NOT NULL,
     url VARCHAR(100) NOT NULL,
     start_date DATE NOT NULL DEFAULT NOW(),
-    point GEOMETRY NOT NULL,
+    point GEOMETRY(Point, 4326) NOT NULL,
     radius INTEGER NOT NULL
 );
 
