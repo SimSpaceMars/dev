@@ -1,12 +1,14 @@
-﻿CREATE OR REPLACE FUNCTION add_eventos(latitud numeric(70), state CHAR(2)) 
+﻿CREATE OR REPLACE FUNCTION add_eventos( descrip varchar(250), u varchar(250),idcat varchar(8), fcha date, c varchar(80), p varchar(80) ,lat decimal(7,3), longit decimal(7,3)) 
     RETURNS void AS $$
     BEGIN
-      INSERT INTO cities VALUES (city, state);
+      INSERT INTO eventos(descripcion, url, idcategoria,fecha, ciudad, pais, latitud, longitud) VALUES (descrip, u, fcha, c, p, lat, longit);
     END;
     $$ LANGUAGE plpgsql;
 
 select*from eventos
-
+select*from categoria
+INSERT INTO categoria values('avc', 'AVIACION')
+INSERT INTO categoria values('esp', 'ESPACIO')
 DROP TABLE solicitud_evt
 
 ALTER TABLE eventos 
