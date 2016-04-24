@@ -1,6 +1,58 @@
 <script type="text/javascript"
       src="http://maps.googleapis.com/maps/api/js?libraries=geometry&key=AIzaSyCyQId5aEVBNEt2_-ZXdWwNI-cTX-jUTvc&sensor=FALSE">
+        function initMap() {
+          var myLatlng = new google.maps.LatLng(-25.363882,131.044922);
+        var mapOptions = {
+          zoom: 4,
+          center: myLatlng
+        }
+        var map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions);
+        
+        var marker = new google.maps.Marker({
+            position: myLatlng,
+            map:map,
+            title:"Hello World!"
+        });
+        
+        // To add the marker to the map, call setMap();
+        marker.setMap(map);
+  var contentString = '<div id="content">'+
+      '<div id="siteNotice">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading">Uluru</h1>'+
+      '<div id="bodyContent">'+
+      '<p><b>Uluru</b>, also referred to as <b>Ayers Rock</b>, is a large ' +
+      'sandstone rock formation in the southern part of the '+
+      'Northern Territory, central Australia. It lies 335&#160;km (208&#160;mi) '+
+      'south west of the nearest large town, Alice Springs; 450&#160;km '+
+      '(280&#160;mi) by road. Kata Tjuta and Uluru are the two major '+
+      'features of the Uluru - Kata Tjuta National Park. Uluru is '+
+      'sacred to the Pitjantjatjara and Yankunytjatjara, the '+
+      'Aboriginal people of the area. It has many springs, waterholes, '+
+      'rock caves and ancient paintings. Uluru is listed as a World '+
+      'Heritage Site.</p>'+
+      '<p>Attribution: Uluru, <a href="https://en.wikipedia.org/w/index.php?title=Uluru&oldid=297882194">'+
+      'https://en.wikipedia.org/w/index.php?title=Uluru</a> '+
+      '(last visited June 22, 2009).</p>'+
+      '</div>'+
+      '</div>';
+/*
+  var infowindow = new google.maps.InfoWindow({
+    content: contentString
+  });
+
+  var marker = new google.maps.Marker({
+    position: uluru,
+    map: map,
+    title: 'Uluru (Ayers Rock)'
+  });
+  marker.addListener('click', function() {
+    infowindow.open(map, marker);
+  });
+}*/
+initMap();
 </script>
+
 <div id="map_canvas" class="col-sm-12" style="height:600px"></div>
 <!-- Desde aquí podés trabajar Dustin-->
 <h3>Description</h3>
@@ -9,14 +61,14 @@
 </button>esto esta en standby no se si lo ocupare x ahora q se quede aquí xD-->
 <p><span class="btn btn-primary btn-sm" onClick="document.getElementById('oculto').style.visibility='visible'">Know more...</span></p>
 <div id="oculto" style="visibility:hidden"> 
-<p class="serif">This project is focused to the warning of diseases and pests that can threaten harvests all around the world, in the past few years, diseases and pests on harvest has caused an estimated of $1 billion in economic damage and the potential loss of up to 500,000 jobs. <br /> The data provided by this website and app can help to mitigate their spread and the onset of epidemics.</p>
+<p class="serif">This project is focused on collecting and developing geotagged information about local ties to space and aviation. This app will be helpful to inform people about important facts related to places nearby. </p>
 <p><span class="btn btns-primary" onClick="document.getElementById('oculto').style.visibility='hidden'">Hide...</span></p>
 </div>
 <br />
 <h3>How does the app work?</h3>
 <p><span class="btn btn-primary btn-sm" onClick="document.getElementById('oculto2').style.visibility='visible'">Know more...</span></p>
 <div id="oculto2" style="visibility:hidden">
-<p class="serif">This app obtains info. about the new diseases and pests, but also, alerts through the android app, to all who has a connection to Internet and the app installed.<br /> So, if a new disease or pest is affecting areas near you, the app will alert you about what disease or pest is it, it will give you information about it, and at last it will give you recommendations that you can take to face this disease or pest.</p>
+<p class="serif">This app obtains information by user input and also by information already placed within our database. Then that information will be placed in the map by using the Google API.</p>
 <p><span class="btn btns-primary" onClick="document.getElementById('oculto2').style.visibility='hidden'">Hide...</span></p>
 </div>
 <!-- Hasta acá, dejá este script de último-->
